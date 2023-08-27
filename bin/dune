@@ -1,0 +1,4 @@
+(executable
+ (public_name ocaml_99_problems)
+ (name problem_1)
+ (libraries ocaml_99_problems))
