@@ -1,8 +1,8 @@
 let input_data1: ('a list) = ["a"; "b"; "c"; "d"];;
-let input_data2 = [];;
+let input_data2: ('a list) = [];;
 let input_data = [input_data1; input_data2];;
 
-let rec last_two l =
+let rec last_two (l: 'a list) =
   match l with
   | [] | [_] -> None
   | [a; b] -> Some(a, b)
@@ -11,6 +11,6 @@ let rec last_two l =
   let print_result_opt r =
     match r with
     | None -> print_endline "No result"
-    | Some(x, v) -> print_endline (x print_endline v);;
+    | Some(x, v) -> print_string x print_endline v;;
   
   let () = List.iter print_result_opt (List.map last_two input_data);;
