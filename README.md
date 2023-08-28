@@ -2,6 +2,6 @@
 
 Silly attemp to get familiar with ocaml
 
-Progress: 4/99
+Progress: 5/99
 
 Source: https://v2.ocaml.org/learn/tutorials/99problems.html
