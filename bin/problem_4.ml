@@ -17,3 +17,13 @@ let length_tail_recurcive l =
   | _ :: rest -> aux (n + 1) rest
 in aux 0 l
 ;;
+
+let length_imperative l =
+  let result = ref 0 in
+  let yd = ref l in
+  while !yd != [] do
+    result := !result + 1;
+    yd := List.tl !yd
+  done;
+  !result
+;;
