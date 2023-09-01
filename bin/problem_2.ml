@@ -11,6 +11,6 @@ let rec last_two (l: 'a list) =
   let print_result_opt r =
     match r with
     | None -> print_endline "No result"
-    | Some(x, v) -> print_string x print_endline v;;
+    | Some(x, v) -> Printf.printf "%s %s" x v;;
   
   let () = List.iter print_result_opt (List.map last_two input_data);;
