@@ -27,3 +27,11 @@ let length_imperative l =
   done;
   !result
 ;;
+
+let () = 
+Printf.printf "length_tail_recurcive %s\n" (string_of_int (length_tail_recurcive input_data1));
+Printf.printf "length %s\n" (string_of_int (length input_data1));
+Printf.printf "length_imperative %s\n" (string_of_int (length_imperative input_data1));
+;;
+
+length input_data2;;

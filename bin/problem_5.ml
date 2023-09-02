@@ -1,10 +1,10 @@
 let input_data1: ('a list) = ["a"; "b"; "c"; "d"];;
 let input_data2 = [];;
 
-let rec rev (l: 'a list) = 
+let rec rev_c (l: 'a list) = 
   match l with
   | [] -> l
-  | head :: rest -> (rev rest) @ [head]
+  | head :: rest -> (rev_c rest) @ [head]
 ;;
 
 (* This function is tail-recursive: it uses a constant amount of
@@ -18,3 +18,9 @@ let rev l =
     | h :: t -> aux (h :: acc) t in
   aux [] l
 ;;
+
+let () =
+Printf.printf "[%s]\n" (List.fold_right ( ^ ) (rev input_data1) "")
+;;
+
+List.map rev_c input_data2;;
